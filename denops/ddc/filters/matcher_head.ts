@@ -5,6 +5,7 @@ import {
   Denops,
   DdcOptions,
   FilterOptions,
+  SourceOptions,
 } from "https://deno.land/x/ddc_vim@v0.0.7/types.ts";
 
 export class Filter extends BaseFilter {
