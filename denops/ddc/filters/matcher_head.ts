@@ -2,26 +2,32 @@ import {
   BaseFilter,
   Candidate,
   Context,
-  Denops,
   DdcOptions,
+  Denops,
   FilterOptions,
   SourceOptions,
-} from "https://deno.land/x/ddc_vim@v0.0.7/types.ts";
+} from "https://deno.land/x/ddc_vim@v0.0.8/types.ts";
 
 export class Filter extends BaseFilter {
   filter(
     _denops: Denops,
     _context: Context,
     _options: DdcOptions,
-    _sourceOptions: SourceOptions,
+    sourceOptions: SourceOptions,
     _filterOptions: FilterOptions,
     _filterParams: Record<string, unknown>,
     completeStr: string,
     candidates: Candidate[],
   ): Promise<Candidate[]> {
-    const filtered = candidates.filter(
-      (candidate) => candidate.word.startsWith(completeStr),
-    );
-    return Promise.resolve(filtered);
+    if (sourceOptions.ignoreCase) {
+      completeStr = completeStr.toLowerCase();
+      return Promise.resolve(candidates.filter(
+        (candidate) => candidate.word.toLowerCase().startsWith(completeStr),
+      ));
+    } else {
+      return Promise.resolve(candidates.filter(
+        (candidate) => candidate.word.startsWith(completeStr),
+      ));
+    }
   }
 }

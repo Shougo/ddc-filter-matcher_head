@@ -4,15 +4,15 @@ Heading matcher for ddc.vim
 
 This filter checks heading match.
 
-
 ## Required
 
 ### denops.vim
+
 https://github.com/vim-denops/denops.vim
 
 ### ddc.vim
-https://github.com/Shougo/ddc.vim
 
+https://github.com/Shougo/ddc.vim
 
 ## Configuration
 
