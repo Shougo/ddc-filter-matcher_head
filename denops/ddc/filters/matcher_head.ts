@@ -3,10 +3,10 @@ import {
   Candidate,
   Context,
   DdcOptions,
-  Denops,
   FilterOptions,
   SourceOptions,
-} from "https://deno.land/x/ddc_vim@v0.0.8/types.ts";
+} from "https://deno.land/x/ddc_vim@v0.0.9/types.ts";
+import { Denops } from "https://deno.land/x/ddc_vim@v0.0.9/deps.ts";
 
 export class Filter extends BaseFilter {
   filter(
