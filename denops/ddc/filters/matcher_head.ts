@@ -2,7 +2,7 @@ import {
   BaseFilter,
   Candidate,
   SourceOptions,
-} from "https://deno.land/x/ddc_vim@v0.2.1/types.ts#^";
+} from "https://deno.land/x/ddc_vim@v0.3.0/types.ts#^";
 
 export class Filter extends BaseFilter {
   filter(args: {
