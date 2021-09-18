@@ -2,9 +2,9 @@ import {
   BaseFilter,
   Candidate,
   SourceOptions,
-} from "https://deno.land/x/ddc_vim@v0.3.0/types.ts#^";
+} from "https://deno.land/x/ddc_vim@v0.9.0/types.ts#^";
 
-export class Filter extends BaseFilter {
+export class Filter extends BaseFilter<{}> {
   filter(args: {
     sourceOptions: SourceOptions,
     completeStr: string,
@@ -21,4 +21,6 @@ export class Filter extends BaseFilter {
       ));
     }
   }
+
+  params(): {} { return {}; }
 }
