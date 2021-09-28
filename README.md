@@ -21,5 +21,7 @@ https://github.com/Shougo/ddc.vim
 call ddc#custom#patch_global('sourceOptions', {
       \ '_': {
       \   'matchers': ['matcher_head'],
-      \ })
+      \ }
+      \})
+
 ```
