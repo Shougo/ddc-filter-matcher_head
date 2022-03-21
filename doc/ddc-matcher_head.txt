@@ -31,7 +31,11 @@ You must use neovim 0.5.0+ with matcher_head configuration.
 ==============================================================================
 EXAMPLES					*ddc-matcher_head-examples*
 >
->
+	call ddc#custom#patch_global('sourceOptions', {
+	      \ '_': {
+	      \   'matchers': ['matcher_head'],
+	      \ }
+	      \})
 	call ddc#custom#patch_global('sources', ['matcher_head'])
 <
 

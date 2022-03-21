@@ -17,11 +17,9 @@ https://github.com/Shougo/ddc.vim
 ## Configuration
 
 ```vim
-" Use matcher_head.
 call ddc#custom#patch_global('sourceOptions', {
       \ '_': {
       \   'matchers': ['matcher_head'],
       \ }
       \})
-
 ```
