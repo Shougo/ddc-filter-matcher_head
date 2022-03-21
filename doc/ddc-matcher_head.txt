@@ -34,7 +34,6 @@ EXAMPLES					*ddc-matcher_head-examples*
 	      \   'matchers': ['matcher_head'],
 	      \ }
 	      \})
-	call ddc#custom#patch_global('sources', ['matcher_head'])
 <
 
 ==============================================================================
