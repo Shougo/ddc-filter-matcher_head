@@ -11,22 +11,22 @@ type Params = {
 export class Filter extends BaseFilter<Params> {
   filter(args: {
     sourceOptions: SourceOptions,
-    filterParams: Record<string, unknown>,
+    filterParams: Params,
     completeStr: string,
     items: Item[],
   }): Promise<Item[]> {
-    const maxMatchLength = args.filterParams.maxMatchLength as number
-    let str: string = maxMatchLength == 0
+    const maxMatchLength = args.filterParams.maxMatchLength;
+    let compareStr: string = maxMatchLength == 0
       ? args.completeStr
-      : args.completeStr.slice(0, maxMatchLength)
+      : args.completeStr.slice(0, maxMatchLength);
     if (args.sourceOptions.ignoreCase) {
-      str = str.toLowerCase();
+      compareStr = compareStr.toLowerCase();
       return Promise.resolve(args.items.filter(
-        (item) => item.word.toLowerCase().startsWith(str),
+        (item) => item.word.toLowerCase().startsWith(compareStr),
       ));
     } else {
       return Promise.resolve(args.items.filter(
-        (item) => item.word.startsWith(str),
+        (item) => item.word.startsWith(compareStr),
       ));
     }
   }

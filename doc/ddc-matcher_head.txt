@@ -12,7 +12,7 @@ Params			|ddc-matcher_head-params|
 
 
 ==============================================================================
-INTRODUCTION					*ddc-matcher_head-introduction*
+INTRODUCTION				*ddc-matcher_head-introduction*
 
 This filter filters items by word head.
 
@@ -35,7 +35,8 @@ EXAMPLES					*ddc-matcher_head-examples*
 	      \ }
 	      \})
 <
-You can define filters with |ddc#custom#alias()| as your preference like below:
+You can define filters with |ddc#custom#alias()| as your preference like
+below:
 >
 	call ddc#custom#alias('filter', 'matcher_initial', 'matcher_head')
 	call ddc#custom#alias('filter', 'matcher_first_2', 'matcher_head')
@@ -64,21 +65,26 @@ You can define filters with |ddc#custom#alias()| as your preference like below:
 	      \   'matchers': ['matcher_initial', 'matcher_fuzzy'],
 	      \ }
 	      \})
-<
+
+Note: This sample supposes that you have installed tani/ddc-fuzzy.
+https://github.com/tani/ddc-fuzzy
+
+
 ==============================================================================
 PARAMS						*ddc-matcher_head-params*
 
-					*ddc-matcher_head-param-maxMatchLength*
+				*ddc-matcher_head-param-maxMatchLength*
 maxMatchLength	(number)
-		Set `0` to reduce candidates which don't match with entire user
+		Set `0` to reduce items which don't match with entire user
 		input.
-		Set a positive number to reduce candidates which don't match
-		with user input in the length.
+		Set a positive number to reduce items which don't match with
+		user input in the length.
 		Set a negative number to apply filter in the length shorter
 		than current input by the absolute number.
-		(There is no guarantee that this option will work properly
-		when user input string contains some particular characters.
-		It depends on the implementation of `String.prototype.slice()`.)
+		Note: There is no guarantee that this option will work
+		properly when user input string contains some particular
+		characters. It depends on the implementation of
+		`String.prototype.slice()`.
 
 		Default: `0`
 
