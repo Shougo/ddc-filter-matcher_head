@@ -17,9 +17,9 @@ This filter checks heading match.
 ## Configuration
 
 ```vim
-call ddc#custom#patch_global('sourceOptions', {
-      \ '_': {
-      \   'matchers': ['matcher_head'],
-      \ }
+call ddc#custom#patch_global('sourceOptions', #{
+      \  _: #{
+      \    matchers: ['matcher_head'],
+      \  }
       \})
 ```

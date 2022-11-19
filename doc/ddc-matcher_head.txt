@@ -29,10 +29,10 @@ https://github.com/vim-denops/denops.vim
 ==============================================================================
 EXAMPLES					*ddc-matcher_head-examples*
 >
-	call ddc#custom#patch_global('sourceOptions', {
-	      \ '_': {
-	      \   'matchers': ['matcher_head'],
-	      \ }
+	call ddc#custom#patch_global('sourceOptions', #{
+	      \  _: #{
+	      \    matchers: ['matcher_head'],
+	      \  }
 	      \})
 <
 You can define filters with |ddc#custom#alias()| as your preference like
@@ -43,28 +43,28 @@ below:
 	call ddc#custom#alias('filter', 'matcher_first_3', 'matcher_head')
 	call ddc#custom#alias('filter', 'matcher_lazy_1', 'matcher_head')
 	call ddc#custom#alias('filter', 'matcher_lazy_2', 'matcher_head')
-	call ddc#custom#patch_global('filterParams', {
-	      \ 'matcher_initial': {
-	      \   'maxMatchLength': 1,
-	      \ },
-	      \ 'matcher_first_2': {
-	      \   'maxMatchLength': 2,
-	      \ },
-	      \ 'matcher_first_3': {
-	      \   'maxMatchLength': 3,
-	      \ },
-	      \ 'matcher_lazy_1': {
-	      \   'maxMatchLength': -1,
-	      \ },
-	      \ 'matcher_lazy_2': {
-	      \   'maxMatchLength': -2,
-	      \ },
-	      \})
-	call ddc#custom#patch_global('sourceOptions', {
-	      \ '_': {
-	      \   'matchers': ['matcher_initial', 'matcher_fuzzy'],
-	      \ }
-	      \})
+	call ddc#custom#patch_global('filterParams', #{
+	      \   matcher_initial: #{
+	      \     maxMatchLength: 1,
+	      \   },
+	      \   matcher_first_2: #{
+	      \     maxMatchLength: 2,
+	      \   },
+	      \   matcher_first_3: #{
+	      \     maxMatchLength: 3,
+	      \   },
+	      \   matcher_lazy_1: #{
+	      \     maxMatchLength: -1,
+	      \   },
+	      \   matcher_lazy_2: #{
+	      \     maxMatchLength: -2,
+	      \   },
+	      \ })
+	call ddc#custom#patch_global('sourceOptions', #{
+	      \   _: #{
+	      \     matchers: ['matcher_initial', 'matcher_fuzzy'],
+	      \   }
+	      \ })
 
 Note: This sample supposes that you have installed tani/ddc-fuzzy.
 https://github.com/tani/ddc-fuzzy
