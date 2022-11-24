@@ -9,7 +9,7 @@ type Params = {
 };
 
 export class Filter extends BaseFilter<Params> {
-  filter(args: {
+  override filter(args: {
     sourceOptions: SourceOptions,
     filterParams: Params,
     completeStr: string,
@@ -31,7 +31,7 @@ export class Filter extends BaseFilter<Params> {
     }
   }
 
-  params(): Params {
+  override params(): Params {
     return {
       maxMatchLength: 0,
     };
