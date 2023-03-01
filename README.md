@@ -1,4 +1,4 @@
-# ddc-matcher_head
+# ddc-filter-matcher_head
 
 Heading matcher for ddc.vim
 

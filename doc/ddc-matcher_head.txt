@@ -1,24 +1,24 @@
-*ddc-matcher_head.txt*	Heading matcher for ddc.vim
+*ddc-filter-matcher_head.txt*	Heading matcher for ddc.vim
 
 Author: Shougo <Shougo.Matsu at gmail.com>
 License: MIT license
 
-CONTENTS					*ddc-matcher_head-contents*
+CONTENTS				*ddc-filter-matcher_head-contents*
 
-Introduction		|ddc-matcher_head-introduction|
-Install			|ddc-matcher_head-install|
-Examples		|ddc-matcher_head-examples|
-Params			|ddc-matcher_head-params|
+Introduction		|ddc-filter-matcher_head-introduction|
+Install			|ddc-filter-matcher_head-install|
+Examples		|ddc-filter-matcher_head-examples|
+Params			|ddc-filter-matcher_head-params|
 
 
 ==============================================================================
-INTRODUCTION				*ddc-matcher_head-introduction*
+INTRODUCTION				*ddc-filter-matcher_head-introduction*
 
 This filter filters items by word head.
 
 
 ==============================================================================
-INSTALL						*ddc-matcher_head-install*
+INSTALL					*ddc-filter-matcher_head-install*
 
 Please install both "ddc.vim" and "denops.vim".
 
@@ -27,7 +27,7 @@ https://github.com/vim-denops/denops.vim
 
 
 ==============================================================================
-EXAMPLES					*ddc-matcher_head-examples*
+EXAMPLES				*ddc-filter-matcher_head-examples*
 >
 	call ddc#custom#patch_global('sourceOptions', #{
 	      \  _: #{
@@ -71,9 +71,9 @@ https://github.com/tani/ddc-fuzzy
 
 
 ==============================================================================
-PARAMS						*ddc-matcher_head-params*
+PARAMS					*ddc-filter-matcher_head-params*
 
-				*ddc-matcher_head-param-maxMatchLength*
+				*ddc-filter-matcher_head-param-maxMatchLength*
 maxMatchLength	(number)
 		Set `0` to reduce items which don't match with entire user
 		input.
