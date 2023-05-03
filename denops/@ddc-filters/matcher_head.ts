@@ -16,7 +16,7 @@ export class Filter extends BaseFilter<Params> {
     items: Item[],
   }): Promise<Item[]> {
     const maxMatchLength = args.filterParams.maxMatchLength;
-    let compareStr: string = maxMatchLength == 0
+    let compareStr: string = maxMatchLength === 0
       ? args.completeStr
       : args.completeStr.slice(0, maxMatchLength);
     if (args.sourceOptions.ignoreCase) {
