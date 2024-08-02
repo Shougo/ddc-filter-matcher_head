@@ -1,8 +1,8 @@
 import {
   BaseFilter,
-  Item,
-  SourceOptions,
-} from "https://deno.land/x/ddc_vim@v4.3.1/types.ts";
+  type Item,
+  type SourceOptions,
+} from "jsr:@shougo/ddc-vim@6.0.0/types";
 
 type Params = {
   maxMatchLength: number;
