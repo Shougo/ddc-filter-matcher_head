@@ -1,8 +1,5 @@
-import {
-  BaseFilter,
-  type Item,
-  type SourceOptions,
-} from "jsr:@shougo/ddc-vim@6.0.0/types";
+import { type Item, type SourceOptions } from "jsr:@shougo/ddc-vim@~7.0.0/types";
+import { BaseFilter } from "jsr:@shougo/ddc-vim@~7.0.0/filter";
 
 type Params = {
   maxMatchLength: number;
@@ -10,10 +7,10 @@ type Params = {
 
 export class Filter extends BaseFilter<Params> {
   override filter(args: {
-    sourceOptions: SourceOptions,
-    filterParams: Params,
-    completeStr: string,
-    items: Item[],
+    sourceOptions: SourceOptions;
+    filterParams: Params;
+    completeStr: string;
+    items: Item[];
   }): Promise<Item[]> {
     const maxMatchLength = args.filterParams.maxMatchLength;
     let compareStr: string = maxMatchLength === 0
