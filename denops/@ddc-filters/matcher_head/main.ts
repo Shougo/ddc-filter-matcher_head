@@ -1,8 +1,5 @@
-import {
-  type Item,
-  type SourceOptions,
-} from "jsr:@shougo/ddc-vim@~9.1.0/types";
-import { BaseFilter } from "jsr:@shougo/ddc-vim@~9.1.0/filter";
+import type { Item, SourceOptions } from "@shougo/ddc-vim/types";
+import { BaseFilter } from "@shougo/ddc-vim/filter";
 
 type Params = {
   maxMatchLength: number;
