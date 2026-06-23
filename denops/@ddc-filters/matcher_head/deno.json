@@ -9,6 +9,6 @@
     ]
   },
   "imports": {
-    "@shougo/ddc-vim": "jsr:@shougo/ddc-vim@~10.0.0"
+    "@shougo/ddc-vim": "jsr:@shougo/ddc-vim@~10.3.0"
   }
 }
